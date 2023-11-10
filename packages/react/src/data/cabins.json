@@ -1,0 +1,242 @@
+[
+	{
+		"cabinName": "Forest Haven",
+		"maxCapacity": "6",
+		"regularPrice": "160",
+		"discount": "10",
+		"description": "A cabin surrounded by lush forests.",
+		"coverImage": "image11.jpg"
+	},
+	{
+		"cabinName": "Lakeview Retreat",
+		"maxCapacity": "8",
+		"regularPrice": "180",
+		"discount": "15",
+		"description": "A serene cabin with breathtaking lake views.",
+		"coverImage": "image12.jpg"
+	},
+	{
+		"cabinName": "Mountain Vista",
+		"maxCapacity": "5",
+		"regularPrice": "140",
+		"discount": "0",
+		"description": "A cabin with panoramic mountain vistas.",
+		"coverImage": "image13.jpg"
+	},
+	{
+		"cabinName": "Riverside Oasis",
+		"maxCapacity": "4",
+		"regularPrice": "120",
+		"discount": "10",
+		"description": "A cabin by the river for nature lovers.",
+		"coverImage": "image14.jpg"
+	},
+	{
+		"cabinName": "Sunny Cottage",
+		"maxCapacity": "3",
+		"regularPrice": "110",
+		"discount": "5",
+		"description": "A charming and sunny cottage getaway.",
+		"coverImage": "image15.jpg"
+	},
+	{
+		"cabinName": "Beachfront Bungalow",
+		"maxCapacity": "6",
+		"regularPrice": "170",
+		"discount": "20",
+		"description": "A beachfront bungalow for beach enthusiasts.",
+		"coverImage": "image16.jpg"
+	},
+	{
+		"cabinName": "Mountain Lodge",
+		"maxCapacity": "10",
+		"regularPrice": "250",
+		"discount": "10",
+		"description": "A spacious lodge in the heart of the mountains.",
+		"coverImage": "image17.jpg"
+	},
+	{
+		"cabinName": "Coastal Getaway",
+		"maxCapacity": "4",
+		"regularPrice": "140",
+		"discount": "0",
+		"description": "A coastal cabin with ocean views.",
+		"coverImage": "image18.jpg"
+	},
+	{
+		"cabinName": "Wildlife Sanctuary",
+		"maxCapacity": "6",
+		"regularPrice": "160",
+		"discount": "5",
+		"description": "A cabin surrounded by a wildlife sanctuary.",
+		"coverImage": "image19.jpg"
+	},
+	{
+		"cabinName": "Ski Chalet",
+		"maxCapacity": "8",
+		"regularPrice": "200",
+		"discount": "15",
+		"description": "A cozy chalet for skiers and snowboarders.",
+		"coverImage": "image20.jpg"
+	},
+	{
+		"cabinName": "Desert Retreat",
+		"maxCapacity": "4",
+		"regularPrice": "130",
+		"discount": "10",
+		"description": "A desert cabin for a unique getaway.",
+		"coverImage": "image21.jpg"
+	},
+	{
+		"cabinName": "Hidden Gem",
+		"maxCapacity": "2",
+		"regularPrice": "100",
+		"discount": "5",
+		"description": "A hidden gem for a peaceful escape.",
+		"coverImage": "image22.jpg"
+	},
+	{
+		"cabinName": "Lakeside Serenity",
+		"maxCapacity": "8",
+		"regularPrice": "190",
+		"discount": "10",
+		"description": "A serene cabin by the lakeside.",
+		"coverImage": "image23.jpg"
+	},
+	{
+		"cabinName": "Meadow View",
+		"maxCapacity": "6",
+		"regularPrice": "170",
+		"discount": "5",
+		"description": "A cabin with a beautiful meadow view.",
+		"coverImage": "image24.jpg"
+	},
+	{
+		"cabinName": "Sunset Cabin",
+		"maxCapacity": "4",
+		"regularPrice": "150",
+		"discount": "0",
+		"description": "A cabin with stunning sunset views.",
+		"coverImage": "image25.jpg"
+	},
+	{
+		"cabinName": "Forest Hideout",
+		"maxCapacity": "6",
+		"regularPrice": "160",
+		"discount": "5",
+		"description": "A hidden cabin in the forest.",
+		"coverImage": "image26.jpg"
+	},
+	{
+		"cabinName": "Rustic Cabin",
+		"maxCapacity": "4",
+		"regularPrice": "140",
+		"discount": "10",
+		"description": "A rustic cabin with natural charm.",
+		"coverImage": "image27.jpg"
+	},
+	{
+		"cabinName": "Waterfront Lodge",
+		"maxCapacity": "10",
+		"regularPrice": "230",
+		"discount": "15",
+		"description": "A lodge with stunning waterfront views.",
+		"coverImage": "image28.jpg"
+	},
+	{
+		"cabinName": "Mountain Paradise",
+		"maxCapacity": "8",
+		"regularPrice": "190",
+		"discount": "0",
+		"description": "A paradise for mountain lovers.",
+		"coverImage": "image29.jpg"
+	},
+	{
+		"cabinName": "Lake Cabin",
+		"maxCapacity": "6",
+		"regularPrice": "170",
+		"discount": "10",
+		"description": "A cabin with views of a tranquil lake.",
+		"coverImage": "image30.jpg"
+	},
+	{
+		"cabinName": "Cozy Retreat",
+		"maxCapacity": "4",
+		"regularPrice": "120",
+		"discount": "10",
+		"description": "A cozy cabin with a beautiful view.",
+		"coverImage": "image1.jpg"
+	},
+	{
+		"cabinName": "Rustic Lodge",
+		"maxCapacity": "6",
+		"regularPrice": "150",
+		"discount": "5",
+		"description": "A rustic lodge nestled in the woods.",
+		"coverImage": "image2.jpg"
+	},
+	{
+		"cabinName": "Lakefront Getaway",
+		"maxCapacity": "8",
+		"regularPrice": "180",
+		"discount": "15",
+		"description": "A relaxing lakefront cabin with stunning views.",
+		"coverImage": "image3.jpg"
+	},
+	{
+		"cabinName": "Mountain Escape",
+		"maxCapacity": "5",
+		"regularPrice": "140",
+		"discount": "0",
+		"description": "A mountain cabin for adventure seekers.",
+		"coverImage": "image4.jpg"
+	},
+	{
+		"cabinName": "Luxury Retreat",
+		"maxCapacity": "10",
+		"regularPrice": "250",
+		"discount": "20",
+		"description": "A luxurious cabin with top-notch amenities.",
+		"coverImage": "image5.jpg"
+	},
+	{
+		"cabinName": "Secluded Hideaway",
+		"maxCapacity": "2",
+		"regularPrice": "100",
+		"discount": "5",
+		"description": "A secluded cabin for a romantic escape.",
+		"coverImage": "image6.jpg"
+	},
+	{
+		"cabinName": "Wilderness Adventure",
+		"maxCapacity": "6",
+		"regularPrice": "160",
+		"discount": "10",
+		"description": "An adventure cabin in the heart of the wilderness.",
+		"coverImage": "image7.jpg"
+	},
+	{
+		"cabinName": "Family Cabin",
+		"maxCapacity": "7",
+		"regularPrice": "170",
+		"discount": "0",
+		"description": "A family-friendly cabin for a memorable vacation.",
+		"coverImage": "image8.jpg"
+	},
+	{
+		"cabinName": "Ski Lodge",
+		"maxCapacity": "12",
+		"regularPrice": "220",
+		"discount": "10",
+		"description": "A cozy ski lodge for winter enthusiasts.",
+		"coverImage": "image9.jpg"
+	},
+	{
+		"cabinName": "Riverfront Retreat",
+		"maxCapacity": "6",
+		"regularPrice": "190",
+		"discount": "5",
+		"description": "A cabin by the river for a peaceful stay.",
+		"coverImage": "image10.jpg"
+	}
+]
