@@ -27,7 +27,8 @@ import {
 } from './ui/form';
 import { Label } from './ui/label';
 import GlassLayout from './GlassLayout';
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
+import trpc from '../utils/trpc';
 
 const formSchema = z.object({
 	cabinName: z
@@ -51,6 +52,7 @@ export default function CabinForm({
 	defaultValues,
 	triggerButton,
 }: Props) {
+	const [open, setOpen] = useState(false);
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -58,11 +60,28 @@ export default function CabinForm({
 			coverImage: '',
 		},
 	});
+	const context = trpc.useContext();
+
+	const { mutate: addCabin, isLoading } = trpc.cabin.create.useMutation({
+		onSuccess(data) {
+			console.log('🚀 ~ file: CabinForm.tsx:59 ~ onSuccess ~ data:', data);
+			context.cabin.getAll.invalidate();
+			onReset();
+		},
+	});
 
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		// Do something with the form values.
 		// ✅ This will be type-safe and validated.
-		console.log(values);
+		addCabin({
+			cabinName: +values.cabinName,
+			maxCapacity: +values.maxCapacity,
+			regularPrice: +values.regularPrice,
+			discount: +values.discount,
+			description: values.description,
+			coverImage: values.coverImage,
+		});
+		setOpen(false);
 	}
 
 	function onReset() {
@@ -78,7 +97,7 @@ export default function CabinForm({
 	}
 	return (
 		<Dialog modal>
-			<DialogTrigger asChild>
+			<DialogTrigger asChild onClick={() => setOpen(true)}>
 				{/* <Button className='rounded-lg'>Add New Cabin</Button> */}
 				{triggerButton}
 			</DialogTrigger>
@@ -212,6 +231,7 @@ export default function CabinForm({
 									Cancel
 								</Button>
 							</DialogClose>
+
 							<Button className='w-full mt-4'>
 								{editForm ? 'Edit Cabin' : 'Add Cabin'}
 							</Button>

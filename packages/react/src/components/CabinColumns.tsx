@@ -14,7 +14,15 @@ import { HiPencil, HiSquare2Stack, HiTrash } from 'react-icons/hi2';
 import CabinForm from './CabinForm';
 import { Dialog, DialogTrigger } from './ui/dialog';
 import WarningDialog from './WarningDialog';
-export type Cabin = (typeof cabins)[number];
+export type Cabin = {
+	id: number;
+	cabinName: number;
+	maxCapacity: number;
+	regularPrice: number;
+	discount: number | null;
+	description: string | null;
+	coverImage: string | null;
+};
 
 export const CabinColumns: ColumnDef<Cabin>[] = [
 	{
@@ -101,7 +109,7 @@ export const CabinColumns: ColumnDef<Cabin>[] = [
 
 			return (
 				<div className='text-left px-4 font-medium text-green-600 dark:text-green-400'>
-					{formatted}
+					{amount ? formatted : '--'}
 				</div>
 			);
 		},
@@ -129,6 +137,9 @@ export const CabinColumns: ColumnDef<Cabin>[] = [
 							</DropdownMenuItem>
 
 							<CabinForm
+								//@ts-ignore
+								defaultValues={cabin}
+								editForm
 								triggerButton={
 									<DropdownMenuItem>
 										<HiPencil />

@@ -21,22 +21,35 @@ import {
 } from '../components/ui/form';
 import { Label } from '../components/ui/label';
 import BackgroundImage from '../components/BackgroundImage';
+import trpc from '../utils/trpc';
 
 const formSchema = z.object({
+	email: z
+		.string({ required_error: 'Please enter a email.' })
+		.min(1, { message: 'Please enter a email.' })
+		.email({ message: 'Please enter a valid email.' }),
 	password: z
-		.string()
-		.min(6, 'Password must be at least 6 characters long.')
-		.max(20, 'Password can be no longer than 20 characters.')
-		.regex(
-			/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).*$/,
-			'Password must contain at least one lowercase letter, one uppercase letter, and one digit.'
-		),
-
-	email: z.string().email('Please enter a valid email address.'),
+		.string({ required_error: 'Please enter a password' })
+		.min(4, { message: 'Password must be at least 4 characters long.' }),
 });
 
 type Props = {};
 export default function LogIn({}: Props) {
+	const { mutate, data, isLoading, error, isSuccess, isError } =
+		trpc.login.useMutation({
+			onSuccess(data, variables, context) {
+				console.log(
+					'🚀 ~ file: LogIn.tsx:43 ~ trpc.login.useMutation ~ data:',
+					data,
+					variables,
+					context
+				);
+			},
+			onError(err) {
+				console.log('🚀 ~ file: LogIn.tsx:52 ~ onError ~ err:', err.message);
+			},
+		});
+
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -48,7 +61,7 @@ export default function LogIn({}: Props) {
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		// Do something with the form values.
 		// ✅ This will be type-safe and validated.
-		console.log(values);
+		mutate(values);
 	}
 
 	return (
